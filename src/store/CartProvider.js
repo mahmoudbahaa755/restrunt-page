@@ -6,40 +6,40 @@ import cartContext from "./cart-context";
      item: [],
      totalAmount: 0,
 
- }
+ };
  const cartReducer = (state, action) => {
     if( action.type === 'ADD'){
-        // const getItemIndex= state.item.findIndex((item)=> item.id === action.item.id)
-        // const existingItem = state.item[getItemIndex]
-        // var updatedItems=[];
-        // if(existingItem){
-        //     let updatedItem 
-        //     updatedItem={
-        //         ...existingItem,
-        //         amount : existingItem.amount+ 1
-        //     }
-        //     updatedItems[existingItem]=updatedItem
+         const getItemIndex= state.item.findIndex((item)=> item.id === action.item.id);
+         const existingItem = state.item[getItemIndex];
+         var updatedItems=[];
+         if(existingItem){
+             let updatedItem ;
+             updatedItem={
+                 ...existingItem,
+                 amount : existingItem.amount+ 1
+             };
+             updatedItems[existingItem]=updatedItem;
 
-        // }
-        // else{
-           const  updatedItems= state.item.concat(action.item)
-        // }
-        const updatedAmount= state.totalAmount + 1*action.item.price
+         }
+         else{
+           const  updatedItems= state.item.concat(action.item);
+         }
+        const updatedAmount= state.totalAmount + 1*action.item.price;
         return {
             item: updatedItems,
             totalAmount:updatedAmount
-        }
+        };
     }
     else{
-    const updatedItems = state.item.concat(action.item)
-    const updatedAmount = state.totalAmount -  1*action.item.price
+    const updatedItems = state.item.concat(action.item);
+    const updatedAmount = state.totalAmount -  1*action.item.price;
     return {
         item: updatedItems,
         totalAmount: updatedAmount
-        }
+        };
      }
-     return defaultCartState
- }
+     return defaultCartState;
+ };
 function CartProvider(props){
    
    const [cartState,dispatchCartAction]= useReducer( cartReducer, defaultCartState)
@@ -47,7 +47,7 @@ function CartProvider(props){
 
     const addItemToCart = (item) => {
         dispatchCartAction({type:'ADD',item:item})
-    }
+    };
     const removeItemFromCart = (item) => {
         dispatchCartAction({type:'REMOVE',item:item})
     }
@@ -60,11 +60,10 @@ function CartProvider(props){
         removeFromCart: removeItemFromCart ,
     }
 
-    return(
-        <cartContext.Provider value={
-        cartContextValue
-        }>
+    return(<cartContext.Provider value={cartContextValue}>
             {props.children}
+            
+            
         </cartContext.Provider>
     )
 }

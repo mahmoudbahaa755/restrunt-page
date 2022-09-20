@@ -1,28 +1,28 @@
-import React, {Fragment ,useState} from "react";
+import React, {useState} from "react";
 import SubHeader from "./components/SubHeader/SubHeader";
 import Header from "./components/Header/Header";
 import MenuSection from "./components/MenuSection/MenuSection";
 import CartOrderNumContext from "./context/CartOrderNumContext";
 import CartWindow from "./components/PopupWindow/CartWindow";
-import CartProvider from './store/CartProvider'
+import CartProvider from './store/CartProvider';
 function App() {
   const [cartIsShown,setCartIsShown] = useState(false);
   const [orderNum, setOrderNum] = useState(0);
   const showCartIsShown = () => {
     setCartIsShown(true);
-  }
+  };
     const hidCartIsShown = () => {
-      setCartIsShown(false)
-    }
-  const changeCartIsShown = () => {
-      setCartIsShown(!cartIsShown);
-  }
+      setCartIsShown(false);
+    };
+  // const changeCartIsShown = () => {
+  //     setCartIsShown(!cartIsShown);
+  // };
   const getOrderNum = (value) => {
    setOrderNum(()=>{
-    return value
-   })
+    return value;
+   });
     
-  }
+  };
   return (
     <CartProvider>
     {cartIsShown && <CartWindow onClose={hidCartIsShown}/>}
