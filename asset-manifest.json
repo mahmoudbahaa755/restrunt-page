@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/mahmoudbahaa755.github.io/restrunt-page/static/css/main.221217a1.chunk.css",
+    "main.js": "/mahmoudbahaa755.github.io/restrunt-page/static/js/main.20d07c07.chunk.js",
+    "main.js.map": "/mahmoudbahaa755.github.io/restrunt-page/static/js/main.20d07c07.chunk.js.map",
+    "runtime-main.js": "/mahmoudbahaa755.github.io/restrunt-page/static/js/runtime-main.fdb229fc.js",
+    "runtime-main.js.map": "/mahmoudbahaa755.github.io/restrunt-page/static/js/runtime-main.fdb229fc.js.map",
+    "static/js/2.15f23b07.chunk.js": "/mahmoudbahaa755.github.io/restrunt-page/static/js/2.15f23b07.chunk.js",
+    "static/js/2.15f23b07.chunk.js.map": "/mahmoudbahaa755.github.io/restrunt-page/static/js/2.15f23b07.chunk.js.map",
+    "index.html": "/mahmoudbahaa755.github.io/restrunt-page/index.html",
+    "static/css/main.221217a1.chunk.css.map": "/mahmoudbahaa755.github.io/restrunt-page/static/css/main.221217a1.chunk.css.map",
+    "static/js/2.15f23b07.chunk.js.LICENSE.txt": "/mahmoudbahaa755.github.io/restrunt-page/static/js/2.15f23b07.chunk.js.LICENSE.txt",
+    "static/media/subHeader.2971f633.png": "/mahmoudbahaa755.github.io/restrunt-page/static/media/subHeader.2971f633.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fdb229fc.js",
+    "static/js/2.15f23b07.chunk.js",
+    "static/css/main.221217a1.chunk.css",
+    "static/js/main.20d07c07.chunk.js"
+  ]
+}
